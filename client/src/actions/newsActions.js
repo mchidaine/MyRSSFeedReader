@@ -12,8 +12,16 @@ export default function loadNews() {
                 name: "Latest News"
             }));
         }).catch(error => {
-            throw (error);
+            dispatch(loadNewsError("500"));
+            //throw (error);
         });
+    };
+}
+
+export function loadNewsError(errorCode){
+    return {
+        type: types.LOAD_NEWS_ERROR,
+        errorCode
     };
 }
 
@@ -25,7 +33,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getAllNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Arts":
@@ -33,7 +42,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getArtsNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Business":
@@ -41,7 +51,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getBusinessNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Company News":
@@ -49,7 +60,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getCompanyNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                   // throw (error);
                 });
             };
         case "Entertainment":
@@ -57,7 +69,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getEntertainmentNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                   // throw (error);
                 });
             };
         case "Environment":
@@ -65,7 +78,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getEnvironmentNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                 //   throw (error);
                 });
             };
         case "Health News":
@@ -73,7 +87,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getHealthNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                 //   throw (error);
                 });
             };
         case "Lifestyle":
@@ -81,7 +96,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getLifestyleNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Money":
@@ -89,7 +105,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getWealthNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Most Read Articles":
@@ -97,7 +114,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getMostReadNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                   // throw (error);
                 });
             };
         case "Oddly Enough":
@@ -105,7 +123,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getOddlyEnoughNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                   // throw (error);
                 });
             };
         case "People":
@@ -113,7 +132,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getPeopleNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Politics":
@@ -121,7 +141,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getPoliticsNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                 //   throw (error);
                 });
             };
         case "Science":
@@ -129,7 +150,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getScienceNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                 //   throw (error);
                 });
             };
         case "Sports":
@@ -137,7 +159,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getSportsNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "Technology":
@@ -145,7 +168,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getTechnologyNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                 //   throw (error);
                 });
             };
         case "Top News":
@@ -153,7 +177,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getTopNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "US News":
@@ -161,7 +186,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getUSNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError("500"));
+                  //  throw (error);
                 });
             };
         case "World News":
@@ -169,7 +195,8 @@ export const selectCategory = (category, preferences) => {
                 return newsApi.getWorldNews().then(news => {
                     dispatch(loadNewsSuccess(news, category));
                 }).catch(error => {
-                    throw (error);
+                dispatch(loadNewsError(error, "500"));
+                 //   throw (error);
                 });
             };
         case "My Feed": //when category My Feed is clicked => calls all news checked in preferences
@@ -179,10 +206,11 @@ export const selectCategory = (category, preferences) => {
                 let i = 0;
 
                 preferences.map((preference) => {
+
                     tempNews[i] = getApi(preference);
                     i++;
-                });
 
+                });
                 if (tempNews.length === 0) {
                     dispatch(loadFavoriteNewsRetrievedSuccess(updatedNews, category));
                 } else {
@@ -197,14 +225,25 @@ export const selectCategory = (category, preferences) => {
 
                             });
                         });
+                    }).catch((error)=> {
+                        dispatch(loadNewsErrorMyFeed("500", category));
                     });
                 }
             };
+
 
         default:
             return;
     }
 
+}
+
+export function loadNewsErrorMyFeed(errorCode, category){
+    return {
+        type: types.LOAD_NEWS_ERROR_MYFEED,
+        errorCode,
+        category
+    };
 }
 
 

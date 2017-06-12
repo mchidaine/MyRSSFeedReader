@@ -10,21 +10,25 @@ class NewsList extends Component{
 
 
     createListItems(){
+    if(this.props.news==="500") return (<div className="errorMessage">Erreur de connexion au serveur</div>);
+    else {
         return this.props.news.map((unews, index) => { //shows list of news
             return (
                <li key={index}><Article>{unews}</Article></li>
             );
         });
-      }
+      }}
 
       createFavoriteListItems(){
+      if(this.props.news==="500") return (<div className="errorMessage">Erreur de connexion au serveur</div>);
+      else {
         return this.props.favoriteNews.map((unews, index) => { //shows list of favorite news
             return (
                 <li key={index} > <Article>{unews}</Article></li>
             );
         });
 
-      }
+      }}
 
 
 

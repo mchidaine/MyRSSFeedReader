@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import newsApi from '../api/newsApi';
+import loadNewsErrorMyFeed from './newsActions';
 
 export const addPreferences = (category, preferences) => { //preference added => reloads all categories in preferences
     return function(dispatch) {
@@ -33,7 +34,9 @@ export const addPreferences = (category, preferences) => { //preference added =>
             });
 
 
-        });
+        }).catch((error)=> {
+               dispatch(loadNewsErrorMyFeed("500", category));
+          });
     };
 
 }
@@ -77,7 +80,9 @@ export const deletePreferences = (category, preferences) => { //preference delet
                         }
                     });
                 });
-            });
+            }).catch((error)=> {
+                  dispatch(loadNewsErrorMyFeed("500", category));
+             });
         }
     };
 }
@@ -107,119 +112,137 @@ export default function getApi(category) {
             return newsApi.getArtsNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Business":
             return newsApi.getBusinessNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Company News":
             return newsApi.getCompanyNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Entertainment":
             return newsApi.getEntertainmentNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Environment":
             return newsApi.getEnvironmentNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Health News":
             return newsApi.getHealthNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Lifestyle":
             return newsApi.getLifestyleNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
         case "Money":
             return newsApi.getWealthNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Most Read Articles":
             return newsApi.getMostReadNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Oddly Enough":
             return newsApi.getOddlyEnoughNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "People":
             return newsApi.getPeopleNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Politics":
             return newsApi.getPoliticsNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Science":
             return newsApi.getScienceNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Sports":
             return newsApi.getSportsNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Technology":
             return newsApi.getTechnologyNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "Top News":
             return newsApi.getTopNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "US News":
             return newsApi.getUSNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         case "World News":
             return newsApi.getWorldNews().then(news => {
                 return news;
             }).catch(error => {
-                throw (error);
+                //throw (error);
+                return "500";
             });
 
         default:

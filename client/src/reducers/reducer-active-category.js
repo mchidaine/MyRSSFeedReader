@@ -7,6 +7,8 @@ export default function(state = initialState.category, action) {
             return action.category;
         case types.LOAD_RETRIEVED_NEWS_SUCCESS:
             return action.category;
+        case types.LOAD_NEWS_ERROR_MYFEED:
+            return action.category;
         default:
             return state;
     }
