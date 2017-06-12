@@ -1,0 +1,52 @@
+.article .articleOverview {
+    background-color:#e9ece5;
+    margin: 0 auto;
+    width:60%;
+    border-radius: 10px;
+    padding : 5px 10px;
+    margin-bottom : 5px;
+    margin-top : 5px;
+    position:relative;
+    overflow:hidden;
+    z-index:1;
+}
+
+.article a{
+    color: #3b3a36;
+    text-decoration: none;
+}
+
+.article .articleOverview:hover{
+    background:#e3e0cf;
+}
+
+
+.article h3{
+    max-width:600px;
+    float:left;
+    overflow:hidden;
+}
+
+.article .time{
+    position:absolute;
+    top:10px;
+    right:10px;
+    overflow:hidden;
+}
+
+.article .time img {
+    height: 15px;
+    width: 20px;
+    line-height:5px;
+}
+
+.article .articleContent {
+    display:inline-block;
+    text-align: left;
+}
+
+.article .articleOrigin {
+    display : block;
+    float:left;
+    font-size:10px;
+}

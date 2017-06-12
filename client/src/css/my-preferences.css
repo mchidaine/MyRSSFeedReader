@@ -1,0 +1,20 @@
+.myPreferences{
+    display:block;
+    position:fixed;
+    background-color:#e9ece5;
+    border-radius: 10px;
+    margin-left:10px;
+    margin-top: 5px;
+}
+
+.myPreferences ul {
+    list-style: none;
+    padding: 0 10px;
+
+}
+
+.myPreferences ul li {
+    color: #3b3a36;
+    text-decoration:none;
+    text-align:left;
+}

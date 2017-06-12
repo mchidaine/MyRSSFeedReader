@@ -1,0 +1,39 @@
+.categoryList{
+    position:fixed;
+    margin-top:70px;
+    z-index:3;
+}
+
+.categoryList ul{
+    background: #9fa8a3;
+    box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+    padding: 0 20px;
+    list-style: none;
+    position: relative;
+    display: inline-table;
+    margin:0;
+}
+
+.categoryList li {
+     float:left;
+}
+
+.categoryList ul li:hover{
+    background: #e3e0cf;
+}
+
+.categoryList .active  {
+     background: #e3e0cf;
+ }
+
+.categoryList ul li a {
+     display: block;
+     padding: 15px 7.5px;
+     color: #3b3a36;
+     text-decoration: none;
+     font-size:10px;
+ }
+.categoryList ul li a:hover {
+     color: #3b3a36;
+ }
+
