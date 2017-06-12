@@ -9,9 +9,13 @@
 >>>localStorage.js
 
 >>>actions : contains all actions
+
 >>>api : contains API calls to server
+
 >>>containers : contains components/containers 
+
 >>>css : contains all css code
+
 >>>reducers : contains all reducers
 
 On load, the application loads all News from server and orders them by most recent
@@ -24,3 +28,6 @@ There's still one bug : when the preferences are saved and you want to uncheck a
 (the preferences will still be updated, as will the newsfeed, but the checkbox itself won't uncheck, unless you leave the page and come back.)
 I suspect it might be because I should've created a whole component for the checkbox in order to save its 'checked/unchecked' property in the state.
 The checkbox needs to be controlled, but it's uncontrolled for now.
+
+
+Also I just noticed my node_modules folder in the client won't upload to git, so I'm trying to work on this issue, as the project my not compile without it.
