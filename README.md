@@ -30,4 +30,4 @@ I suspect it might be because I should've created a whole component for the chec
 The checkbox needs to be controlled, but it's uncontrolled for now.
 
 
-Also I just noticed my node_modules folder in the client won't upload to git, so I'm trying to work on this issue, as the project my not compile without it.
+Also my node_modules folder in the client hasn't been uploaded to git - I'm working on this issue.
