@@ -4,6 +4,10 @@
 
 >Client (reactjs, redux) => npm start to start the client
 
+
+The application works fine locally (client + server). As I haven't used a module bundler like Webpack for the server yet, it might be missing some dependencies to run as is. The client was created with the create-react-app project, so it will run just fine with "npm-start".
+
+
 >>src
 >>>index.js
 >>>localStorage.js
