@@ -37,8 +37,8 @@ class NewsList extends Component{
             </div></div>
         );
     } else {
-        return(
-        <div className="bodyList"> //called in all other tabs
+        return(//called in all other tabs
+        <div className="bodyList">
             <div className="newsList"> <ul>{this.createListItems()}</ul>
             </div></div>
         );
