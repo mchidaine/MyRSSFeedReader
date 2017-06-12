@@ -1,6 +1,7 @@
 import * as types from './actionTypes';
 import newsApi from '../api/newsApi';
 import loadNewsErrorMyFeed from './newsActions';
+import loadNewsError from './newsActions';
 
 export const addPreferences = (category, preferences) => { //preference added => reloads all categories in preferences
     return function(dispatch) {

@@ -22,12 +22,15 @@ class NewsList extends Component{
       createFavoriteListItems(){
       if(this.props.news==="500") return (<div className="errorMessage">Erreur de connexion au serveur</div>);
       else {
-        return this.props.favoriteNews.map((unews, index) => { //shows list of favorite news
-            return (
-                <li key={index} > <Article>{unews}</Article></li>
-            );
-        });
-
+        if(this.props.favoriteNews.length===0){
+            return (<div className="no-articles">Please select your favorite categories</div>);
+        } else{
+            return this.props.favoriteNews.map((unews, index) => { //shows list of favorite news
+                return (
+                    <li key={index} > <Article>{unews}</Article></li>
+                );
+            });
+        }
       }}
 
 

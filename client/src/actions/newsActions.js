@@ -18,12 +18,6 @@ export default function loadNews() {
     };
 }
 
-export function loadNewsError(errorCode){
-    return {
-        type: types.LOAD_NEWS_ERROR,
-        errorCode
-    };
-}
 
 //when a category is clicked from the menu : calls actions from 'api' folder
 export const selectCategory = (category, preferences) => {
@@ -236,6 +230,14 @@ export const selectCategory = (category, preferences) => {
             return;
     }
 
+}
+
+
+export function loadNewsError(errorCode){
+    return {
+        type: types.LOAD_NEWS_ERROR,
+        errorCode
+    };
 }
 
 export function loadNewsErrorMyFeed(errorCode, category){
